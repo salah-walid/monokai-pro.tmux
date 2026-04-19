@@ -5,5 +5,6 @@ show_session(){
   local show_left_separator="#[fg=$background,bg=$dark2,nobold,nounderscore,noitalics]$status_left_separator"
   local show_text="#[fg=$color,bg=$background,bold] #S #[default]"
   local show_right_separator="#[fg=$background,bg=$dark2,nobold,nounderscore,noitalics]$status_right_separator"
-  echo "$show_left_separator$show_text$show_right_separator"
+  local content="$show_left_separator$show_text$show_right_separator"
+  echo "#{?#{m/r:^(popup|claude)_,#S},,$content}"
 }
