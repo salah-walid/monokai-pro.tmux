@@ -176,6 +176,7 @@ main() {
   set status-left "$loaded_modules_left"
 
   tmux "${tmux_commands[@]}"
+
 }
 
 main "$@"
